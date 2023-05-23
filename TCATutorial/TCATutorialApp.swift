@@ -1,17 +1,16 @@
-//
-//  TCATutorialApp.swift
-//  TCATutorial
-//
-//  Created by 飯塚政美 on 2023/05/23.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct TCATutorialApp: App {
+    static let store = Store(initialState: CounterFeature.State()) {
+        CounterFeature()
+            ._printChanges()
+      }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CounterView(store: TCATutorialApp.store)
         }
     }
 }

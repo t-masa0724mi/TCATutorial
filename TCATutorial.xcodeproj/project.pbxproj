@@ -11,6 +11,8 @@
 		E2F43E2C2A1C7A6D005A6A86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F43E2B2A1C7A6D005A6A86 /* ContentView.swift */; };
 		E2F43E2E2A1C7A72005A6A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F43E2D2A1C7A72005A6A86 /* Assets.xcassets */; };
 		E2F43E312A1C7A72005A6A86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F43E302A1C7A72005A6A86 /* Preview Assets.xcassets */; };
+		E2F43E3F2A1C96A3005A6A86 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F43E3E2A1C96A3005A6A86 /* CounterFeature.swift */; };
+		E2F43E422A1C96CD005A6A86 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E2F43E412A1C96CD005A6A86 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		E2F43E2B2A1C7A6D005A6A86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2F43E2D2A1C7A72005A6A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2F43E302A1C7A72005A6A86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E2F43E3E2A1C96A3005A6A86 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F43E422A1C96CD005A6A86 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				E2F43E292A1C7A6D005A6A86 /* TCATutorialApp.swift */,
 				E2F43E2B2A1C7A6D005A6A86 /* ContentView.swift */,
+				E2F43E3E2A1C96A3005A6A86 /* CounterFeature.swift */,
 				E2F43E2D2A1C7A72005A6A86 /* Assets.xcassets */,
 				E2F43E2F2A1C7A72005A6A86 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = TCATutorial;
+			packageProductDependencies = (
+				E2F43E412A1C96CD005A6A86 /* ComposableArchitecture */,
+			);
 			productName = TCATutorial;
 			productReference = E2F43E262A1C7A6D005A6A86 /* TCATutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = E2F43E1D2A1C7A6C005A6A86;
+			packageReferences = (
+				E2F43E402A1C96CD005A6A86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = E2F43E272A1C7A6D005A6A86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F43E3F2A1C96A3005A6A86 /* CounterFeature.swift in Sources */,
 				E2F43E2C2A1C7A6D005A6A86 /* ContentView.swift in Sources */,
 				E2F43E2A2A1C7A6D005A6A86 /* TCATutorialApp.swift in Sources */,
 			);
@@ -337,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2F43E402A1C96CD005A6A86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2F43E412A1C96CD005A6A86 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2F43E402A1C96CD005A6A86 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2F43E1E2A1C7A6C005A6A86 /* Project object */;
 }
